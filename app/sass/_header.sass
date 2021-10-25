@@ -1,0 +1,247 @@
+
+.header-wrapper
+	display: block
+	width: 100%
+	margin: 0
+	min-height: 1210px
+	background: linear-gradient(to right, $mainBcg 70%, $secBcg 30%)
+	
+.header
+	width: 85%
+	height: 108px
+	margin: 0 auto
+	display: flex
+	padding-top: 20px
+
+.logo
+	font-size: 72px
+	font-weight: bold
+	color: $secBcg
+.menu
+	display: flex
+	min-width: 490px
+	padding: 50px 0
+	justify-content: space-between
+	&__item 
+		z-index: 2
+		a
+			color: $mainColor
+			
+.user-panel
+	display: flex
+	align-content: flex-end
+	padding: 50px 0
+	z-index: 2
+	&__icon
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		background-color: white
+		padding: 10px
+		position: relative
+	&__icon--active
+		width: 15px
+		height: 15px
+		border-radius: 50%
+		background-color: #31A24C
+		position: absolute
+		top: 0	
+		right: 0
+	&__name
+		color: white
+		padding: 10px 5px
+
+/*Menu-caret style start*/   
+.caret
+  position: absolute
+  background: $mainBcg
+  color: $mainColor
+  width: max-content
+  transition: visibility 0.5s linear, opacity 0.5s linear 
+  z-index: 5
+  opacity: 0
+  visibility: hidden    
+.caret__item
+    text-decoration: none
+    list-style-type: none  
+.menu-caret__icon
+    width: 10px
+    transition: .5s
+.menu-caret:hover
+    .menu-caret__icon
+        transform: rotate(180deg)
+    .caret
+        opacity: 1
+        visibility: visible    
+/*Menu-caret style end*/  
+
+.food-section
+	width: 85%
+	margin: 0 auto	
+	margin-top: 130px
+
+.description-block__main-para	
+	font-weight: 900
+	font-size: 200px
+	line-height: 189px
+	opacity: .05
+.description-block__secondary-para
+	font-weight: bold
+	font-size: 72px
+	line-height: 90px
+.search-block
+	height: 90px
+	width: 670px
+	margin-top: 40px
+	padding: 10px
+	background-color: white	
+	display: flex
+	justify-content: space-between
+	&__input
+		color: $mainColor
+		margin-left: 50px
+		border: none
+		&::placeholder
+			color: $mainColor
+		&:hover
+			cursor: pointer	
+	&__button
+		width: 200px
+		height: 70px
+		font-size: 30px
+		font-weight: 600
+		color: white
+		text-transform: uppercase
+		border-radius: 60px 0px 0px 0px
+		background-color: $secBcg
+		&:hover
+			opacity: 0.75
+.location-block
+	position: absolute
+	left: 0
+	top: 866px
+	display: flex
+	height: 65px
+	width: 280px
+	border-radius: 0px 100px 100px 0px
+	background: $secBcg
+	justify-content: center
+	&__image
+		display: block
+		width: min-content
+		height: min-content
+		margin: auto 0
+	&__name
+		height: min-content	
+		margin: auto 0 auto 20px
+		color: white
+		font-size: 30px
+
+.bg-block
+	background: url("../images/dropsBG.svg") no-repeat
+	height: 340px
+	width: 380px
+/*carousel*/
+.carousel
+	position: absolute
+	width: 980px
+	height: 1170px
+	top: 0
+	right: 0	
+.slide
+	min-height: max-content
+	min-width: max-content	
+.slide__BGimg
+	position: relative
+	top: 20px
+	left: 130px
+.slide__img
+	position: relative
+	z-index: 1
+	top: 180px
+	left: -600px
+	width: 780px
+.buttons
+	display: flex
+	justify-content: flex-end
+	margin-top: 150px
+	margin-right: 135px
+.button-prev
+	margin-right: 40px	
+	&:hover
+		opacity: 0.75
+.button-next:hover		
+	opacity: 0.75
+
+@media only screen and (max-width: 1195px)
+	.header
+		width: 95%	
+	.logo
+		font-size: 60px
+	.menu
+		visibility: hidden 
+	.user-panel
+		visibility: hidden
+	.food-section
+		width: 95%
+		margin-top: 30px
+	.description-block__main-para	
+		margin-top: 50px
+		font-size: 150px
+		line-height: 110px
+	.description-block__secondary-para
+		width: 650px
+		font-size: 60px
+		line-height: 60px
+		z-index: 2
+	.search-block
+		width: 460px
+		&__input
+			margin-left: 30px
+		&__button
+			width: 145px
+	.location-block
+		top: 746px
+	.bg-block
+		height: 300px 
+		width: 220px
+	/*carousel*/
+	.carousel
+		position: absolute
+		width: 600px
+		height: 1000px
+		top: 0
+		right: 0	
+	.slide
+		min-height: max-content
+		min-width: max-content	
+	.slide__BGimg
+		position: relative
+		top: -70px
+		left: 50px
+		width: 400px
+	.slide__img
+		position: relative
+		z-index: 1
+		top: 180px
+		left: -600px
+		width: 580px
+	.buttons
+		display: flex
+		justify-content: flex-end
+		margin-top: 150px
+		margin-right: 135px
+	.button-prev
+		margin-right: 40px	
+		&:hover
+			opacity: 0.75
+	.button-next:hover		
+		opacity: 0.75
+@media only screen and (max-width: 991px)
+	.header
+	
+@media only screen and (max-width: 767px)
+	.header
+
+@media only screen and (max-width: 575px)
+	.header

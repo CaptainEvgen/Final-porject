@@ -1,0 +1,29 @@
+@import "reset"
+@import "fonts"
+@import "variables"
+@import "typography"
+
+@import "header"
+@import "footer"
+
+@import "components"
+@import "sections/sections"
+
+body
+    font-family: Poppins
+    font-size: 14px
+    color: $mainColor
+.container
+    max-width: 1920px
+    margin: 0 auto
+    position: relative
+    padding: 0
+    border: 1px solid black
+    background-color: $mainBcg
+a
+  color: $mainColor
+  &:hover
+    opacity: 0.7  
+@media only screen and (max-width: 1195px)
+  .container
+    max-width: 1195px      
