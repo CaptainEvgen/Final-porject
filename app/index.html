@@ -14,101 +14,175 @@
    
   </head>
   <body>
-      <header class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-2">
-              <div class="logo">
-                expice
-              </div>
-            </div>  
-            <div class="col-lg-4 offset-lg-1">
-              <div class=" menu">
-                <div class="menu__item"><a href="#">Menu One</a></div>
-                <div class="menu__item"><a href="#">Menu Two</a></div>
-                <div class="menu__item"><a href="#">Menu Three</a></div>
-                <div class="menu__item"><a href="#">Menu Four</a></div>
-              </div>
-            </div>
-            <div class="col-lg-1 offset-lg-4">
-              <div class="user-panel">
-                <div class="user-panel__icon">
-                  <img src="images/User icon.svg" alt="">
-                  <div class="user-panel__icon--active"></div>
-                </div>
-                <div class="user-panel__name menu-caret">User
-                  <img src="images/arrowDown.svg" class="menu-caret__icon">
-                  <ul class="caret">
-                    <li class="caret__item">User 1</li>
-                    <li class="caret__item">User 2</li>
-                    <li class="caret__item">User 3</li>
-                    <li class="caret__item">User 4</li>
-                  </ul>  
-                </div>
-              </div>
-            </div>
+    <div class="sidebar">
+      <div class="sidebar__item">            
+        <div class="user-sidebar">
+          <div class="user-sidebar__icon">
+            <img src="images/User icon.svg" alt="">
+          </div>
+          <div class="user-sidebar__name menu-caret">User
+            <img src="images/arrowDown.svg" class="menu-caret__icon">
+            <ul class="caret">
+              <li class="caret__item">User 1</li>
+              <li class="caret__item">User 2</li>
+              <li class="caret__item">User 3</li>
+              <li class="caret__item">User 4</li>
+            </ul>  
           </div>
         </div>
-      </header>
+      </div>  
+      <div class="sidebar__item"><a href="#">Menu One</a></div>
+      <div class="sidebar__item"><a href="#">Menu Two</a></div>
+      <div class="sidebar__item"><a href="#">Menu Three</a></div>
+      <div class="sidebar__item"><a href="#">Menu Four</a></div>
 
-      <main class="main">
-        <section class="food-section">
-          <div class="container">
-            <div class="row">
-                  <div class="col-lg-6">
-                    <div class="description-block">
-                      <div class="description-block__main-para">Food</div>
-                      <div class="description-block__secondary-para">Discover Restaurant & Delicious Food</div>
-                      <div class="search-block">
-                        <input type="text" class="search-block__input" placeholder="Search Restaurant, Food">
-                        <button class="search-block__button">go</button>
-                      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-lg-2">
+            <div class="logo">
+              expice
+            </div>
+          </div>  
+          <div class="col-6 col-sm-7 col-lg-4 offset-lg-1">
+            <div class=" menu">
+              <div class="menu__item"><a href="#">Menu One</a></div>
+              <div class="menu__item"><a href="#">Menu Two</a></div>
+              <div class="menu__item"><a href="#">Menu Three</a></div>
+              <div class="menu__item"><a href="#">Menu Four</a></div>
+            </div>
+          </div>
+          <div class="col-1 offset-lg-4">
+            <div class="user-panel">
+              <div class="user-panel__icon">
+                <img src="images/User icon.svg" alt="">
+                <div class="user-panel__icon--active"></div>
+              </div>
+              <div class="user-panel__name menu-caret">User
+                <img src="images/arrowDown.svg" class="menu-caret__icon">
+                <ul class="caret">
+                  <li class="caret__item">User 1</li>
+                  <li class="caret__item">User 2</li>
+                  <li class="caret__item">User 3</li>
+                  <li class="caret__item">User 4</li>
+                </ul>  
+              </div>
+            </div>
+            <div class="burger-menu"><img src="images/burger-menu.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="food-section">
+        <div class="container">
+          <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="description-block">
+                    <div class="description-block__main-para">Food</div>
+                    <div class="description-block__secondary-para">Discover Restaurant & Delicious Food</div>
+                    <div class="search-block">
+                      <input type="text" class="search-block__input" placeholder="Search Restaurant, Food">
+                      <button class="search-block__button">go</button>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="bg-block"></div>
-                        <div class="bg-block"></div>
+                </div>
+                <div class="col-12 col-lg-6 carousel-wrapper">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="bg-block"></div>
+                      <div class="bg-block"></div>
+                    </div>
+                  </div>  
+                  <div class="mySwiper carousel">
+                    <div class="swiper-wrapper slides">
+                      <div class="swiper-slide slide">
+                        <img src="images/salad.png" class="slide__BGimg">
+                        <img src="images/dish.png" class="slide__img">  
                       </div>
-                    </div>  
+                      <div class="swiper-slide slide">
+                        <img src="images/salad.png" class="slide__BGimg">
+                        <img src="images/dish.png" class="slide__img rotate">  
+                      </div>
+                    </div>
+                    <div class="buttons">
+                      <div class="button-prev">
+                        <img src="images/Left carousel.png" alt="" class="prev">
+                      </div>
+                      <div class="button-next">
+                        <img src="images/Right carousel.png" alt="" class="next">
+                      </div>
+                    </div> 
                   </div>
                 </div>
               </div>
-              <div class="mySwiper carousel">
-                <div class="swiper-wrapper slides">
-                  <div class="swiper-slide slide">
-                    <img src="images/salad.png" class="slide__BGimg">
-                    <img src="images/dish.png" class="slide__img">  
-                  </div>
-                  <div class="swiper-slide slide">
-                    <img src="images/salad.png" class="slide__BGimg">
-                    <img src="images/dish.png" class="slide__img rotate">  
-                  </div>
+            </div>
+
+        <div class="location-block">
+          <img src="images/location.svg" class="location-block__image">
+          <div class="location-block__name">Rajshahi</div>
+        </div>    
+      </section>
+      <section class="top-restaurants">
+        <div class="container">
+          <div class="top-restaurants__description">
+            <div class="row">
+              <div class="col-lg-6 flexbox">
+                <div class="important-block"></div>
+                <div class="main-para">
+                  some top restaurant for dining in or Take away!
                 </div>
-                <div class="buttons">
-                  <div class="button-prev">
-                    <img src="images/Left carousel.png" alt="" class="prev">
-                  </div>
-                  <div class="button-next">
-                    <img src="images/Right carousel.png" alt="" class="next">
-                  </div>
-                </div> 
               </div>
- 
-          </div>
-          <div class="location-block">
-            <img src="images/location.svg" class="location-block__image">
-            <div class="location-block__name">Rajshahi</div>
-          </div>    
-        </section>
-      </main>
-      <footer class="footer">
-
-      </footer>
-    </div>
-
-
+              <div class="col-lg-6">
+                <div class="second-para">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt. Volutpat metus id amet, nam hac magna accumsan. Nascetur ac tortor purus ultrices morbi tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus auctor eget sed.
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+        <div class="restaurant-preview">
+            <div class="preview-block first-block">
+              <div class="preview-block__info">
+                <div class="preview-block__info-name">Fire Water</div>
+                <div class="preview-block__info-description">we are all about we are all about to the fullest and all content dining out or in!dining out or in!</div>
+                <div class="preview-block__info-location">
+                  <img src="images/location.svg" class="location-block__image">
+                  <div class="location-name">New Market
+                </div>
+              </div>
+                <div class="preview-block__info-button">Book Now</div>
+              </div>
+            </div>
+            <div class="preview-block second-block">
+              <div class="preview-block__info">
+                <div class="preview-block__info-name">The Wonton </div>
+                <div class="preview-block__info-description">we are all about we are all about to the fullest and all content dining out or in!dining out or in!</div>
+                <div class="preview-block__info-location">
+                  <img src="images/location.svg" class="location-block__image">
+                  <div class="location-name">Saheb Bazar</div>
+                </div>
+                <div class="preview-block__info-button">Book Now</div>
+              </div>
+            </div>
+            <div class="restaurant-preview__button">
+              <a href="#!">
+                <img src="images/seemore1.png" class="restaurant-preview__button-image">
+                <div class="restaurant-preview__button-text">see more</div>
+              </a>
+            </div>
+        </div>
+      </section>
+      <section class="booking">
+        <div class="booking-table"></div>
+        <img src="images/leftSalad.png" alt="" class="left-salad">
+        <img src="images/rightSalad.png" alt="" class="right-salad">
+      </section>
+    </main>
+    <footer class="footer">
+    </footer>
 
     <script src="js/main.js"> </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -122,6 +196,12 @@
         mousewheel: true,
         keyboard: true,
       });
+
+      let sidebar = document.querySelector('.sidebar');
+      document.querySelector('.burger-menu').addEventListener('click', ()=>{
+        sidebar.classList.toggle('sidebar--active');
+      })
+      
     </script>
   </body>
 </html>

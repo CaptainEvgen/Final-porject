@@ -28,9 +28,16 @@ function reload(done) {
 }
 
 function compileCSSlibs() {
-	return gulp.src('app/css/libs/*.css')
+	// return gulp.src('app/css/libs/*.css')
+	// 	.pipe(concat('libs.css'))
+	// 	.pipe(cssnano())
+	// 	.pipe(rename({suffix: '.min'}))
+	// 	.pipe(gulp.dest('app/css'));
+	return gulp.src('app/sass/bootstrap/bootstrap-grid.scss')
+    	.pipe(sass().on("error", notify.onError()))
 		.pipe(concat('libs.css'))
-		.pipe(cssnano())
+		.pipe(autoprefixer(['last 15 versions', '>1%', 'ie 8', 'ie 7'], { cascade: true }))
+		.pipe(cleanCSS())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('app/css'));
 }

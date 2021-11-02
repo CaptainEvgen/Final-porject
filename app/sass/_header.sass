@@ -6,6 +6,7 @@
 	display: flex
 	padding-top: 20px
 	z-index: 2
+	
 .logo
 	font-size: 72px
 	padding: 21px 0
@@ -43,7 +44,42 @@
 	&__name
 		color: white
 		padding: 15px 5px
-
+.burger-menu
+	visibility: hidden
+.sidebar
+	position: absolute
+	height: 100%
+	width: 75%
+	background: $mainBcg 
+	left: -250%
+	top: 60px
+	transition: left 0.5s linear
+	z-index: +2
+	&__item    
+		display: block
+		padding: 25px
+		font-size: 25px
+		text-transform: uppercase
+	&--active
+		left: 0		
+.user-sidebar
+	display: flex
+	padding: 50px 0	
+	justify-content: center	
+	&__icon
+		width: 250px
+		height: 250px
+		border-radius: 50%
+		background-color: white
+		position: relative
+		overflow: hidden
+		& img
+			width: 250px
+			height: 250px	
+	&__name
+		font-size: 35px
+		color: $mainColor
+		padding: 15px 5px	
 /*Menu-caret style start*/   
 .caret
   position: absolute
@@ -71,73 +107,24 @@
 /*Menu-caret style end*/  
 
 
-@media only screen and (max-width: 1195px)
+@media only screen and (max-width: 1750px)
 	.logo
 		font-size: 60px
 	.menu
 		visibility: hidden 
 	.user-panel
-		visibility: hidden
-	.food-section
-		width: 95%
-		margin-top: 30px
-	.description-block__main-para	
-		margin-top: 50px
-		font-size: 150px
-		line-height: 110px
-	.description-block__secondary-para
-		width: 650px
-		font-size: 60px
-		line-height: 60px
-		z-index: 2
-	.search-block
-		width: 460px
-		&__input
-			margin-left: 30px
-		&__button
-			width: 145px
-	.location-block
-		top: 746px
-	.bg-block
-		height: 300px 
-		width: 220px
-	/*carousel*/
-	.carousel
-		position: absolute
-		width: 600px
-		height: 1000px
-		top: 0
-		right: 0	
-	.slide
-		min-height: max-content
-		min-width: max-content	
-	.slide__BGimg
-		position: relative
-		top: -70px
-		left: 50px
-		width: 400px
-	.slide__img
-		position: relative
-		z-index: 1
-		top: 180px
-		left: -600px
-		width: 580px
-	.buttons
-		display: flex
-		justify-content: flex-end
-		margin-top: 150px
-		margin-right: 135px
-	.button-prev
-		margin-right: 40px	
-		&:hover
-			opacity: 0.75
-	.button-next:hover		
-		opacity: 0.75
+		display: none
+	.burger-menu
+		visibility: visible	
+		margin-top: 60px
 @media only screen and (max-width: 991px)
-	.header
+	.logo
+		font-size: 48px
+	.burger-menu
+		visibility: visible	
+		margin-top: 60px
 	
-@media only screen and (max-width: 767px)
-	.header
 
 @media only screen and (max-width: 575px)
-	.header
+	.burger-menu
+		margin-right: 10px
