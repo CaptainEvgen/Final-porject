@@ -1,5 +1,4 @@
 .food-section
-    position: relative
     padding-top: 180px
     height: 1210px
     background: linear-gradient(to right, $mainBcg 70%, $secBcg 30%)
@@ -28,6 +27,7 @@
 		border: none
 		&::placeholder
 			color: $mainColor
+			opacity: .6
 		&:hover
 			cursor: pointer	
 	&__button
@@ -67,29 +67,26 @@
 	width: 380px
 /*carousel*/
 .carousel-wrapper
-	position: relative	
+	height: 950px
 .carousel
 	position: relative
 	bottom: 850px
-	height: 900px
-	width: 100%
 .slides
-	min-width: 700px
+	min-width: 750px
 .slide
+	position: relative
 	max-height: 900px
-	min-width: max-content	
+	min-width: min-content
 .slide__BGimg
 	position: relative
-	bottom: 75px
 	left: 130px
 .slide__img
+
 	position: relative
 	z-index: 1
-	top: 70px
-	right: 640px
+	bottom: 540px
+	right: 50px
 	width: 800px
-.rotate
-    transform: rotate(30deg)    
 .buttons
 	display: flex
 	justify-content: flex-end
@@ -100,6 +97,14 @@
 		opacity: 0.75
 .button-next:hover		
 	opacity: 0.75
+@media only screen and (max-width: 1919px)
+	.slide__BGimg
+		left: 130px
+		width: 450px
+	.slide__img
+		bottom: 540px
+		right: 50px
+		width: 750px  
 @media only screen and (max-width: 1750px)
 	.food-section
 		padding-top: 180px
@@ -132,21 +137,18 @@
 		bottom: 830px
 		height: 900px
 	.slides
-		min-height: 600px
-	.slide
-		min-height: max-content
-		min-width: max-content	
+		min-height: 600px	
+		min-width: 640px
 	.slide__BGimg
-		position: relative
-		top: 200px
-		left: 130px
+		top: 210px
 		width: 450px
 	.slide__img
-		position: relative
 		z-index: 1
-		top: 250px
-		right: 410px
-		width: 550px  
+		// top: 300px
+		// right: 410px
+		width: 570px  
+		top: -261px
+		right: -75px
 	.buttons
 		display: flex
 		justify-content: flex-end
@@ -157,33 +159,45 @@
 			opacity: 0.75
 	.button-next:hover		
 		opacity: 0.75
+@media only screen and (max-width: 1399px)
+	.slides
+		min-width: 570px	
+	.slide__BGimg
+		left: 80px
+	.slide__img
+		right: 0		
 @media only screen and (max-width: 1195px)	
 	.description-block__secondary-para
-			line-height: 70px
-			width: 100%
+		line-height: 70px
+		width: 100%
 	/*carousel*/
 	.carousel
-		bottom: 800px
+		bottom: 700px
 		height: 800px
-		scroll-snap-type: x mandatory
+
 	.slides
-		min-width: 550px
+		min-width: 530px
 		min-height: 850px
 	.slide__BGimg
 		top: 180px
 		left: 75px
+		width: 380px
 	.slide__img
-		top: 200px
-		right: 465px
 		width: 530px  
 	.buttons
 		margin-right: 15px
 	.button-prev
 		margin-right: 40px	
+@media only screen and (max-width: 1100px)
+	.slides
+		min-width: 480px
+	.slide__img
+		width: 500px  
+		right: 40px 			
 @media only screen and (max-width: 991px)
 	.food-section
 		padding-top: 100px
-		min-height: 1120px
+		min-height: 1200px
 	.description-block
 		padding-top: 30px
 		&__main-para	
@@ -213,18 +227,15 @@
 		bottom: 530px
 		height: 500px
 	.slides
-		min-height: 510px
+		min-height: 560px
 		min-width: 500px
 	.slide__BGimg
-		position: relative
-		bottom: 0
-		top: -33px
+		top: 0
 		left: 350px
-		width: 390px
+		width: 330px
 	.slide__img
-		top: -5px
-		right: 320px
-		width: 500px  
+		top: -370px
+		left: 100px  
 	.buttons
 		margin-right: -50px
 		& img
@@ -235,25 +246,25 @@
 	.buttons
 		margin-right: -20px
 @media only screen and (max-width: 767px)
+	.slides
+		max-width: 490px	
 	.slide__BGimg
 		position: relative
-		bottom: 0
-		top: -33px
-		left: 150px
+		left: 125px
 		width: 390px
 	.slide__img
-		top: -5px
-		right: 415px
+		top: -450px
+		left: -40px
 		width: 500px  
 	.buttons
-		margin-right: -70px	
-@media only screen and (max-width: 650px)
+		margin-right: -75px	
+@media only screen and (max-width: 665px)
 	.buttons
 		margin-right: -30px
 		& img
 			width: 50px
 @media only screen and (max-width: 576px)
 	.bg-block
-		height: 380px
-		width: 380px
-	 
+		height: 225px
+	.buttons
+		margin-right: -0px
