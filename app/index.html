@@ -15,30 +15,31 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="sidebar">
-        <div class="sidebar__item">            
-          <div class="user-sidebar">
-            <div class="user-sidebar__icon">
-              <img src="images/User icon.svg" alt="">
-            </div>
-            <div class="user-sidebar__name menu-caret">User
-              <img src="images/arrowDown.svg" class="menu-caret__icon">
-              <ul class="caret">
-                <li class="caret__item">User 1</li>
-                <li class="caret__item">User 2</li>
-                <li class="caret__item">User 3</li>
-                <li class="caret__item">User 4</li>
-              </ul>  
-            </div>
-          </div>
-        </div>  
-        <div class="sidebar__item"><a href="#">Menu One</a></div>
-        <div class="sidebar__item"><a href="#">Menu Two</a></div>
-        <div class="sidebar__item"><a href="#">Menu Three</a></div>
-        <div class="sidebar__item"><a href="#">Menu Four</a></div>
 
-      </div>
       <header class="header">
+        <div class="sidebar">
+          <div class="sidebar__item">            
+            <div class="user-sidebar">
+              <div class="user-sidebar__icon">
+                <img src="images/User icon.svg" alt="">
+              </div>
+              <div class="user-sidebar__name menu-caret">User
+                <img src="images/arrowDown.svg" class="menu-caret__icon">
+                <ul class="caret">
+                  <li class="caret__item">User 1</li>
+                  <li class="caret__item">User 2</li>
+                  <li class="caret__item">User 3</li>
+                  <li class="caret__item">User 4</li>
+                </ul>  
+              </div>
+            </div>
+          </div>  
+          <div class="sidebar__item"><a href="#">Menu One</a></div>
+          <div class="sidebar__item"><a href="#">Menu Two</a></div>
+          <div class="sidebar__item"><a href="#">Menu Three</a></div>
+          <div class="sidebar__item"><a href="#">Menu Four</a></div>
+  
+        </div>
         <div class="container">
           <div class="row">
             <div class="col-4 col-lg-2">
@@ -289,7 +290,9 @@
             </div>
             <div class="showcase__scroll">
               <div class="good-block">
-                <img src="images/good1.png" alt="">
+                <div class="good-block__image-block">
+                  <img src="images/good1.png" alt="">
+                </div>
                 <div class="good-block__info">
                   <div class="info__text-block">
                     <div class="text-block__name">Hand Sandwich</div>
@@ -299,7 +302,9 @@
                 </div>
               </div>
               <div class="good-block">
-                <img src="images/good2.png" alt="">
+                <div class="good-block__image-block">
+                  <img src="images/good2.png" alt="">
+                </div>
                 <div class="good-block__info">
                   <div class="info__text-block">
                     <div class="text-block__name">Hand Sandwich</div>
@@ -309,7 +314,9 @@
                 </div>
               </div>
               <div class="good-block">
-                <img src="images/good3.png" alt="">
+                <div class="good-block__image-block">
+                  <img src="images/good3.png" alt="">
+                </div>  
                 <div class="good-block__info">
                   <div class="info__text-block">
                     <div class="text-block__name">Hand Sandwich</div>
@@ -319,7 +326,9 @@
                 </div>
               </div>
               <div class="good-block">
-                <img src="images/good4.png" alt="">
+                <div class="good-block__image-block">
+                  <img src="images/good4.png" alt="">
+                </div>  
                 <div class="good-block__info">
                   <div class="info__text-block">
                     <div class="text-block__name">Hand Sandwich</div>
@@ -329,7 +338,9 @@
                 </div>
               </div>
               <div class="good-block">
-                <img src="images/good5.png" alt="">
+                <div class="good-block__image-block">
+                  <img src="images/good5.png" alt="">
+                </div>  
                 <div class="good-block__info">
                   <div class="info__text-block">
                     <div class="text-block__name">Hand Sandwich</div>
@@ -339,7 +350,9 @@
                 </div>
               </div>
               <div class="good-block">
-                <img src="images/good6.png" alt="">
+                <div class="good-block__image-block">
+                  <img src="images/good6.png" alt="">
+                </div>  
                 <div class="good-block__info">
                   <div class="info__text-block">
                     <div class="text-block__name">Hand Sandwich</div>
@@ -453,11 +466,20 @@
         keyboard: true,
       });
 
-      let sidebar = document.querySelector('.sidebar');
       document.querySelector('.burger-menu').addEventListener('click', ()=>{
-        sidebar.classList.toggle('sidebar--active');
+        document.querySelector('.sidebar').classList.toggle('sidebar--active');
+        document.querySelector('body').classList.toggle('body--disable');
       })
-      
+
+      document.addEventListener('scroll', ()=>{
+        if(document.querySelector('body').scrollTop>0){
+          document.querySelector('.header').classList.add('header-background');
+        } else {
+          document.querySelector('.header').classList.remove('header-background');
+        }
+      })
+ 
+
     </script>
   </body>
 </html>
